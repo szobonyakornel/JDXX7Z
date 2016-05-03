@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="jquery.js">
+</script>
+<script type="text/javascript" src="jquery-ui-1.10.4.custom.min.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+var inputs = document.getElementsByTagName('input');
+for (a = 0; a < inputs.length; a++) {
+if (inputs[a].type == "checkbox") {
+var id = inputs[a].getAttribute("id");
+if (id==null){
+id=  "checkbox" +a;
+}
+inputs[a].setAttribute("id",id);
+var container = document.createElement('div');
+container.setAttribute("class", "ttr_checkbox");
+var label = document.createElement('label');
+label.setAttribute("for", id);
+$(inputs[a]).wrap(container).after(label);
+}
+}
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+var inputs = document.getElementsByTagName('input');
+for (a = 0; a < inputs.length; a++) {
+if (inputs[a].type == "radio") {
+var id = inputs[a].getAttribute("id");
+if (id==null){
+id=  "radio" +a;
+}
+inputs[a].setAttribute("id",id);
+var container = document.createElement('div');
+container.setAttribute("class", "ttr_radio");
+var label = document.createElement('label');
+label.setAttribute("for", id);
+$(inputs[a]).wrap(container).after(label);
+}
+}
+});
+</script>
+<script type="text/javascript" src="tt_slideshow.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('#ttr_slideshow_inner').TTSlider({
+slideShowSpeed:2000,cssPrefix: 'ttr_'
+});
+});
+</script>
+<script type="text/javascript" src="bootstrap.min.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+var window_height =  Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+var body_height = $(document.body).height();
+$content = $("#ttr_content_and_sidebar_container");
+if(body_height < window_height){
+differ = (window_height - body_height);
+content_height = $content.height() + differ;
+$("#ttr_content_and_sidebar_container").css("min-height", content_height+"px");
+}
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('#nav-expander').on('click',function(e){
+e.preventDefault();
+$('body').toggleClass('nav-expanded');
+});
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('.ttr_menu_items ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) { 
+var window_width =  Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+event.preventDefault();
+event.stopPropagation();
+$(this).parent().siblings().removeClass('open');
+$(this).parent().toggleClass(function() {
+if ($(this).is(".open") ) {
+window.location.href = $(this).children("[data-toggle=dropdown]").attr('href'); 
+return "";
+} else {
+return "open";
+}
+});
+});
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('.ttr_vmenu_items ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) { 
+var window_width =  Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+event.preventDefault();
+event.stopPropagation();
+$(this).parent().siblings().removeClass('open');
+$(this).parent().toggleClass(function() {
+if ($(this).is(".open") ) {
+window.location.href = $(this).children("[data-toggle=dropdown]").attr('href'); 
+return "";
+} else {
+return "open";
+}
+});
+});
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+var objects = ['iframe', 'video','object'];
+for(var i = 0 ; i < objects.length ; i++){
+if ($(objects[i]).length > 0) {
+$(objects[i]).addClass('embed-responsive-item');
+$(objects[i]).parent().addClass('embed-responsive embed-responsive-16by9');
+$(".embed-responsive-16by9").css("padding-bottom","56.25%");
+}
+}
+});
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Add the site description here" />
+<meta  name="keywords" content="First keyword, second keyword," />
+<title>
+</title>
+<link rel="stylesheet"  href="bootstrap.css" type="text/css" media="screen"/>
+<link rel="stylesheet"  href="style.css" type="text/css" media="screen"/>
+<!--[if lte IE 8]>
+<link rel="stylesheet"  href="menuie.css" type="text/css" media="screen"/>
+<link rel="stylesheet"  href="vmenuie.css" type="text/css" media="screen"/>
+<![endif]-->
+<script type="text/javascript" src="prefixfree.min.js">
+</script>
+<script type="text/javascript" src="totop.js">
+</script>
+<!--[if IE 7]>
+<style type="text/css" media="screen">
+#ttr_vmenu_items  li.ttr_vmenu_items_parent {margin-left:-16px;font-size:0px;}
+</style>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="html5shiv.js">
+</script>
+<script type="text/javascript" src="respond.min.js">
+</script>
+<![endif]-->
+</head>
+<body class="Index">
+<a href="#" class="back-to-top"><img alt="Back to Top" src="images/gototop.png"/></a>
+<div id="ttr_page"class="container">
+<header id="ttr_header">
+<div id="ttr_header_inner">
+<div class="headerforeground01">
+</div>
+<div class="headerforeground02">
+</div>
+<div class="ttr_title_position">
+<h1 class="ttr_title_style ">
+<a href="#">
++36-12345678
+</a>
+</h1>
+</div>
+<img  class="ttr_header_logo" src="logo.png">
+</img>
+</div>
+</header>
+<nav id="ttr_menu" class="navbar-default navbar">
+   <div id="ttr_menu_inner_in">
+<div class="menuforeground">
+</div>
+<div class="ttr_menushape1">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p><span style="font-family:&quot;Arial&quot;;font-size:24px;color:#FFFFFF;">KORNÉL FELADAT</span></p></div>
+</div>
+<div id="navigationmenu">
+<div class="navbar-header">
+<button id="nav-expander" data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+<span class="sr-only">
+</span>
+<span class="icon-bar">
+</span>
+<span class="icon-bar">
+</span>
+<span class="icon-bar">
+</span>
+</button>
+</div>
+<div class="menu-center collapse navbar-collapse">
+<ul class="ttr_menu_items nav navbar-nav navbar-right">
+<li class="ttr_menu_items_parent dropdown active"><a href="index.html" class="ttr_menu_items_parent_link_active"><span class="menuchildicon"></span>Főoldal</a>
+<hr class ="horiz_separator"/>
+</li>
+<li class="ttr_menu_items_parent dropdown"><a href="#" class="ttr_menu_items_parent_link_arrow dropdown-toggle"data-toggle="dropdown"><span class="menuchildicon"></span>Első</a>
+<hr class ="horiz_separator"/>
+<ul class="child dropdown-menu" role="menu">
+<li><a href="#"><span class="menuchildicon"></span>Lorem Ipsum 1</a>
+<hr class ="separator"/>
+<li  class="dropdown dropdown-submenu"><a href="#" class="subchild dropdown-toggle" data-toggle="dropdown"><span class="menuchildicon"></span>Lorem Ipsum 2</a>
+<hr class ="separator"/>
+<ul class="sub-menu" role="menu">
+<li><a href="#"><span class="menuchildicon"></span>Lorem Ipsum 2(a)</a>
+<hr class ="separator"/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="ttr_menu_items_parent dropdown"><a href="#" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>Második</a>
+<hr class ="horiz_separator"/>
+</li>
+<li class="ttr_menu_items_parent dropdown"><a href="#" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>Harmadik</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</nav>
+<div class="ttr_banner_slideshow">
+</div>
+<div class="ttr_slideshow">
+<div id="ttr_slideshow_inner">
+<div id="Slide0" class="ttr_slide" data-slideEffect="SlideLeft">
+<div class="ttr_slideshow_last">
+<div class="ttr_slideshowshape01" data-effect="Fade" data-begintime="2" data-duration="1" data-easing="easeInOutBack" data-slide="left">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p style="text-indent:20px;font-family:Times New Roman;font-size:12px;"><br style="font-family:&quot;Microsoft Tai Le&quot;;font-size:16px;color:#FFFFFF;" /></p><p style="text-indent:20px;font-family:Times New Roman;font-size:12px;"><span style="font-family:&quot;Microsoft Tai Le&quot;;font-size:16px;color:#FFFFFF;">NULLAM SETE AMETE ELIT UT MAGNA ELITE</span></p></div>
+</div>
+<div class="ttr_slideshowshape02" data-effect="Fade" data-begintime="2" data-duration="1" data-easing="easeInOutBack" data-slide="bottom">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><br /><p style="text-indent:20px;font-family:Times New Roman;font-size:12px;"><span style="font-family:&quot;Microsoft Tai Le&quot;;font-size:15.75px;color:#FFFFFF;">LOREM IPSUM SETE DOALRE AMETE</span></p></div>
+</div>
+</div>
+</div>
+<div id="Slide1" class="ttr_slide" data-slideEffect="SlideLeft">
+<div class="ttr_slideshow_last">
+<div class="ttr_slideshowshape11" data-effect="Fade" data-begintime="2" data-duration="1" data-easing="easeInOutElastic" data-slide="top">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p style="text-indent:20px;font-family:Times New Roman;font-size:12px;"><br style="font-family:&quot;Microsoft Tai Le&quot;;font-size:16px;color:#FFFFFF;" /></p><p style="text-indent:20px;font-family:Times New Roman;font-size:12px;"><span style="font-family:&quot;Microsoft Tai Le&quot;;font-size:16px;color:#FFFFFF;">LOREM IPSUM SETE ELITE SED TEMPOR MINIUM</span></p></div>
+</div>
+<div class="ttr_slideshowshape12" data-effect="RadialBlur" data-begintime="2" data-duration="1" data-easing="easeInOutElastic" data-slide="bottom">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p><br style="font-family:&quot;Microsoft Tai Le&quot;;font-size:16px;color:#FFFFFF;" /></p><p style="text-indent:20px;font-family:Times New Roman;font-size:12px;"><span style="font-family:&quot;Microsoft Tai Le&quot;;font-size:16px;color:#FFFFFF;">LOREM IPSUM SETE ELITE SED TEMPOR</span></p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttr_slideshow_in">
+<div class="ttr_slideshow_last">
+<div id="nav"></div>
+</div>
+</div>
+</div>
+<div class="ttr_banner_slideshow">
+</div>
+<div id="ttr_content_and_sidebar_container">
+<div id="ttr_content">
+<div id="ttr_content_margin"class="container-fluid">
+<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
+<div class="ttr_Index_html_row0 row">
+<div class="post_column col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="ttr_Index_html_column00">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p style="margin:0px 0px 20px 0px;text-align:Center;font-family:Times New Roman;font-size:12px;"><span style="font-family:&quot;Franklin Gothic&quot;;font-size:28px;color:#4E4E4E;">Cím</span></p><p style="margin:0px 0px 20px 0px;text-align:Center;font-family:Times New Roman;font-size:12px;"><span style="font-family:&quot;Microsoft Tai Le&quot;;font-size:16px;color:#696969;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+et dolore magna aliqua. Ut enim ad minim veniam</span></p><br /></div>
+</div>
+</div>
+<div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
+</div>
+</div>
+<div class="ttr_Index_html_row1 row">
+<div class="post_column col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<div class="ttr_Index_html_column10">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p style="margin:0px 0px 20px 0px;font-family:Times New Roman;font-size:12px;"><div style="float:Left;width:88.0122824961395px;margin:0px 20px 0px 0px;padding:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;"><div><img src="images/958.png" style="width:88.0122824961395px;height:88.0122824961395px;margin:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;" /></div></div> <span style="font-family:&quot;Marmelad&quot;;font-size:18px;color:#4E4E4E;">Hasáb1</span></p><p style="margin:0px 0px 20px 0px;font-family:Times New Roman;font-size:12px;"><span style="font-family:&quot;Microsoft Tai Le&quot;;font-size:14px;color:#696969;">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor.</span></p></div>
+</div>
+</div>
+<div class="clearfix visible-xs-block">
+</div>
+<div class="post_column col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<div class="ttr_Index_html_column11">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p style="margin:0px 0px 20px 0px;font-family:Times New Roman;font-size:12px;"><div style="float:Left;width:88.0122824961395px;margin:0px 20px 0px 0px;padding:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;"><div><img src="images/959.png" style="width:88.0122824961395px;height:88.0122824961395px;margin:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;" /></div></div><span style="font-family:&quot;Marmelad&quot;;font-size:18px;color:#4E4E4E;">Hasáb2</span></p><p style="margin:0px 0px 20px 0px;font-family:Times New Roman;font-size:12px;"><span style="font-family:&quot;Microsoft Tai Le&quot;;font-size:14px;color:#696969;">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor.</span></p></div>
+</div>
+</div>
+<div class="clearfix visible-xs-block">
+</div>
+<div class="post_column col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<div class="ttr_Index_html_column12">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p style="margin:0px 0px 20px 0px;font-family:Times New Roman;font-size:12px;"><div style="float:Left;width:88.0122824961395px;margin:0px 20px 0px 0px;padding:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;"><div><img src="images/960.png" style="width:88.0122824961395px;height:88.0122824961395px;margin:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;" /></div></div><span style="font-family:&quot;Marmelad&quot;;font-size:18px;color:#4E4E4E;">Hasáb3</span></p><p style="margin:0px 0px 20px 0px;font-family:Times New Roman;font-size:12px;"><span style="font-family:&quot;Microsoft Tai Le&quot;;font-size:14px;color:#696969;">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor.</span></p></div>
+</div>
+</div>
+<div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
+</div>
+</div>
+<div class="ttr_Index_html_row2 row">
+<div class="post_column col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<div class="ttr_Index_html_column20">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p style="margin:0px 0px 20px 0px;font-family:Times New Roman;font-size:12px;"><div style="float:Left;width:88.0122824961395px;margin:0px 20px 0px 0px;padding:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;"><div><img src="images/961.png" style="width:88.0122824961395px;height:88.0122824961395px;margin:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;" /></div></div> <span style="font-family:&quot;Marmelad&quot;;font-size:18px;color:#4E4E4E;">Hasáb4</span></p><p style="margin:0px 0px 20px 0px;font-family:Times New Roman;font-size:12px;"><span style="font-family:&quot;Microsoft Tai Le&quot;;font-size:14px;color:#4E4E4E;">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor.</span></p></div>
+</div>
+</div>
+<div class="clearfix visible-xs-block">
+</div>
+<div class="post_column col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<div class="ttr_Index_html_column21">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p style="margin:0px 0px 20px 0px;font-family:Times New Roman;font-size:12px;"><div style="float:Left;width:88.0122824961395px;margin:0px 20px 0px 0px;padding:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;"><div><img src="images/962.png" style="width:88.0122824961395px;height:88.0122824961395px;margin:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;" /></div></div><span style="font-family:&quot;Marmelad&quot;;font-size:18px;color:#4E4E4E;">Hasáb5</span></p><p style="margin:0px 0px 20px 0px;font-family:Times New Roman;font-size:12px;"><span style="font-family:&quot;Microsoft Tai Le&quot;;font-size:14px;color:#4E4E4E;">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor.</span></p></div>
+</div>
+</div>
+<div class="clearfix visible-xs-block">
+</div>
+<div class="post_column col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<div class="ttr_Index_html_column22">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p style="margin:0px 0px 20px 0px;font-family:Times New Roman;font-size:12px;"><div style="float:Left;width:88.0122824961395px;margin:0px 20px 0px 0px;padding:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;"><div><img src="images/963.png" style="width:88.0122824961395px;height:88.0122824961395px;margin:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;" /></div></div><span style="font-family:&quot;Marmelad&quot;;font-size:18px;color:#4E4E4E;">Hasáb6</span></p><p style="margin:0px 0px 20px 0px;font-family:Times New Roman;font-size:12px;"><span style="font-family:&quot;Microsoft Tai Le&quot;;font-size:13.5px;color:#4E4E4E;">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor.</span></p></div>
+</div>
+</div>
+<div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
+</div>
+</div>
+<div class="ttr_Index_html_row3 row">
+<div class="post_column col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="ttr_Index_html_column30">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p style="margin:0px 0px 20px 0px;text-align:Center;line-height:25px;font-family:Times New Roman;font-size:12px;"><span style="font-family:&quot;Marmelad&quot;;font-weight:bold;font-size:28px;color:#4E4E4E;">Cím2</span></p><p style="margin:0px 0px 20px 0px;text-align:Center;line-height:25px;font-family:Times New Roman;font-size:12px;"><span style="font-family:&quot;Microsoft Tai Le&quot;;font-size:16px;color:#838383;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+et dolore magna aliqua. Ut enim ad minim veniam .</span></p></div>
+</div>
+</div>
+<div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
+</div>
+</div>
+<div class="ttr_Index_html_row4 row">
+<div class="post_column col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<div class="ttr_Index_html_column40">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p><img src="images/964.jpg" style="width:329.045919786703px;height:154.021494368244px;margin:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;" /></p></div>
+</div>
+</div>
+<div class="clearfix visible-xs-block">
+</div>
+<div class="post_column col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<div class="ttr_Index_html_column41">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p><img src="images/965.jpg" style="width:329.045919786703px;height:154.021494368244px;margin:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;" /></p></div>
+</div>
+</div>
+<div class="clearfix visible-xs-block">
+</div>
+<div class="post_column col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<div class="ttr_Index_html_column42">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p><img src="images/966.jpg" style="width:329.045919786703px;height:154.021494368244px;margin:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;" /></p></div>
+</div>
+</div>
+<div class="clearfix visible-xs-block">
+</div>
+<div class="post_column col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<div class="ttr_Index_html_column43">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p><img src="images/967.jpg" style="width:329.045919786703px;height:154.021494368244px;margin:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;" /></p></div>
+</div>
+</div>
+<div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
+</div>
+</div>
+<div class="ttr_Index_html_row5 row">
+<div class="post_column col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<div class="ttr_Index_html_column50">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p><img src="images/968.jpg" style="width:329.045919786703px;height:154.021494368244px;margin:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;" /></p></div>
+</div>
+</div>
+<div class="clearfix visible-xs-block">
+</div>
+<div class="post_column col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<div class="ttr_Index_html_column51">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p><img src="images/969.jpg" style="width:329.045919786703px;height:154.021494368244px;margin:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;" /></p></div>
+</div>
+</div>
+<div class="clearfix visible-xs-block">
+</div>
+<div class="post_column col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<div class="ttr_Index_html_column52">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p><img src="images/970.jpg" style="width:329.045919786703px;height:154.021494368244px;margin:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;" /></p></div>
+</div>
+</div>
+<div class="clearfix visible-xs-block">
+</div>
+<div class="post_column col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<div class="ttr_Index_html_column53">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p><img src="images/971.jpg" style="width:329.045919786703px;height:154.021494368244px;margin:0px 0px 0px 0px;font-family:Times New Roman;font-size:12px;" /></p></div>
+</div>
+</div>
+<div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
+</div>
+</div>
+<div class="ttr_Index_html_row6 row">
+<div class="post_column col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="ttr_Index_html_column60">
+<div class="html_content" style="font-family:Times New Roman;font-size:12px;"><p style="margin:0px 0px 20px 0px;text-align:Center;font-family:Times New Roman;font-size:12px;"><span style="font-family:&quot;Marmelad&quot;;font-weight:bold;font-size:28px;color:#4E4E4E;">Cím3</span></p><p style="margin:0px 0px 20px 0px;text-align:Center;font-family:Times New Roman;font-size:12px;"><span style="font-family:&quot;Microsoft Tai Le&quot;;font-size:16px;color:#838383;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+et dolore magna aliqua. Ut enim ad minim veniam .
+</span></p></div>
+</div>
+</div>
+<div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
+</div>
+</div>
+<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
+</div>
+</div>
+<div style="clear:both">
+</div>
+</div>
+</div>
+<div style="height:0px;width:0px;overflow:hidden;"></div>
+<footer id="ttr_footer">
+<div class="ttr_footer_bottom_footer">
+<div class="ttr_footer_bottom_footer_inner">
+</div>
+</div>
+</footer>
+<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-bottom-collapse: separate;"></div>
+</body>
+</html>
